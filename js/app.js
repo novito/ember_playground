@@ -18,13 +18,15 @@ App.AllPlayersController = Ember.ArrayController.extend();
 
 App.Player = Ember.Object.extend();
 App.Player.reopenClass({
+    allPlayers: [],
     find: function() {
       $.ajax({
-          url: 'http://api.stackoverflow.com/1.1/tags/ruby/top-answerers/month',
+          url: 'https://api.github.com/repos/osclass/OSClass/contributors',
           dataType: 'jsonp',
           context: this,
           success: function(response){
-              response.data.top_users.forEach(function(player){
+              console.log(response);
+              response.data.forEach(function(player){
                   this.allPlayers.addObject(App.Player.create(player))
               },this)
           },
