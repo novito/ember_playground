@@ -9,9 +9,9 @@
         <h1>Ember Testing</h1>
         {{outlet}}
     </script>
-    <script type="text/x-handlebars" data-template-name="contributors">
-      {{#each person in controller}}
-        {{person.login}}
+    <script type="text/x-handlebars" data-template-name="players">
+      {{#each player in controller}}
+        {{player.name}}
       {{/each}}
     </script>
 <script src="js/app.js"></script>

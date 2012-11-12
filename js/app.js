@@ -6,13 +6,13 @@ App.ApplicationView = Ember.View.extend({
   templateName: 'application'
 });
 
-App.AllContributorsView = Ember.View.extend({
-  templateName: 'contributors'
+App.AllPlayersView = Ember.View.extend({
+  templateName: 'players'
 });
 
 /* Controllers */
 App.ApplicationController = Ember.Controller.extend();
-App.AllContributorsController = Ember.ArrayController.extend();
+App.AllPlayersController = Ember.ArrayController.extend();
 
 
 App.Router = Ember.Router.extend({
@@ -20,7 +20,7 @@ App.Router = Ember.Router.extend({
       index: Ember.Route.extend({
         route: '/',
         connectOutlets: function(router){
-            router.get('applicationController').connectOutlet('allContributors', [{login:'wycats'},{login:'tomdale'}]);
+            router.get('applicationController').connectOutlet('allPlayers', [{name:'rivaldo'},{name:'ronaldinho'}]);
         }
     })
   })
