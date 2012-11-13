@@ -1,0 +1,11 @@
+{
+  "name": "Ember playground",
+  "version": "0.1",
+  "main": "./js/app.js",
+  "dependencies": {
+    "jquery": "~1.8.0",
+    "ember": "~1.0.0",
+    "handlebars": "~1.0.0",
+    "requirejs": "~2.1.1"
+  }
+}
